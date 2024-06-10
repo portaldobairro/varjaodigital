@@ -134,6 +134,10 @@ strong {
   font-weight: var(--font-weight-bold);
 }
 
+.tooplate-yellow {
+	color: #ffff00;
+}
+
 .tooplate-red {
 	color: var(--secondary-color);
 }
