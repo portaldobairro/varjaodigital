@@ -2,51 +2,114 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portal do Bairro</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-    }
-  </style>
 </head>
-<body class="bg-[#fdfaf6] text-[#4b2e1e]">
+<body class="bg-[#FAF5EF] font-[Inter] text-[#442B1D]">
   <!-- Navbar -->
-  <header class="bg-white shadow p-4 flex justify-between items-center rounded-b-2xl">
-    <h1 class="text-xl font-bold">PORTAL DO BAIRRO</h1>
-    <nav class="space-x-6 text-sm font-medium">
-      <a href="#" class="hover:underline">Início</a>
-      <a href="#sobre" class="hover:underline">Sobre o Projeto</a>
-      <a href="#comercios" class="hover:underline">Comércios Locais</a>
-      <a href="#cadastrar" class="hover:underline">Cadastrar</a>
-      <a href="#login" class="hover:underline">Login</a>
-      <a href="#contato" class="hover:underline">Contato</a>
-    </nav>
+  <header class="bg-[#FFF7EE] shadow-md py-4">
+    <div class="container mx-auto flex justify-between items-center px-4">
+      <h1 class="text-xl font-bold">PORTAL DO BAIRRO</h1>
+      <nav class="space-x-4">
+        <a href="#" class="hover:underline">Início</a>
+        <a href="#sobre" class="hover:underline">Sobre o Projeto</a>
+        <a href="#comercios" class="hover:underline">Comércios Locais</a>
+        <a href="#cadastrar" class="hover:underline">Cadastrar</a>
+        <a href="#login" class="hover:underline">Login</a>
+        <a href="#contato" class="hover:underline">Contato</a>
+      </nav>
+    </div>
   </header>
 
   <!-- Hero -->
-  <section class="text-center py-20 bg-[#f5ebdc] px-6">
+  <section class="text-center py-16 px-4">
     <h2 class="text-4xl font-bold mb-4">Descubra o comércio do Varjão</h2>
-    <p class="text-gray-700 mb-6 max-w-xl mx-auto">Encontre facilmente comércios locais e apoie os empreendedores da sua comunidade.</p>
-    <a href="#comercios" class="bg-[#00668a] text-white py-3 px-8 rounded-xl hover:bg-[#005072] transition">Ver comércios</a>
+    <p class="text-lg text-[#5C4033] mb-6 max-w-xl mx-auto">Encontre facilmente comércios locais e apoie os empreendedores da sua comunidade.</p>
+    <a href="#comercios" class="bg-[#217CA3] text-white px-6 py-2 rounded hover:bg-[#1A5E82]">Ver comércios</a>
   </section>
 
   <!-- Sobre o Projeto -->
-  <section id="sobre" class="px-6 py-16 max-w-5xl mx-auto">
-    <h3 class="text-3xl font-bold mb-6">Sobre o Projeto</h3>
-    <p class="text-gray-800 text-lg leading-relaxed">
-      O Portal do Bairro é uma plataforma online criada para fortalecer e dar visibilidade aos comércios locais do Varjão,
-      conectando consumidores e empreendedores da região. Nosso objetivo é promover o desenvolvimento comunitário e valorizar os pequenos comércios que fazem parte da vida do bairro.
-    </p>
+  <section id="sobre" class="bg-[#FFF7EE] py-16 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h3 class="text-3xl font-bold mb-4">Sobre o Projeto</h3>
+      <p class="text-[#5C4033] text-lg leading-relaxed">
+        O <strong>Portal do Bairro</strong> é uma plataforma online criada para fortalecer e dar visibilidade aos comércios locais do Varjão. Nosso objetivo é conectar consumidores da comunidade a empreendedores da região, promovendo o desenvolvimento local de forma simples e acessível.
+      </p>
+    </div>
+  </section>
+
+  <!-- Comércios Locais -->
+  <section id="comercios" class="py-16 px-4 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <h3 class="text-3xl font-bold text-center mb-8">Comércios Locais</h3>
+      <div class="flex flex-col md:flex-row md:justify-between mb-6 gap-4">
+        <input type="text" placeholder="Buscar comércios" class="w-full md:w-2/3 px-4 py-2 border border-[#D6BFA4] rounded-md">
+        <select class="w-full md:w-1/3 px-4 py-2 border border-[#D6BFA4] rounded-md">
+          <option>Todos os setores</option>
+          <option>Alimentação</option>
+          <option>Mercados</option>
+          <option>Saúde</option>
+          <option>Serviços</option>
+        </select>
+      </div>
+      <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
+        <div class="bg-[#FFF7EE] border rounded-lg shadow p-4">
+          <img src="https://source.unsplash.com/400x300/?market" alt="Mercado Central" class="rounded mb-3">
+          <h4 class="text-xl font-semibold">Mercado Central</h4>
+          <p class="text-[#5C4033] text-sm">Rua da Lajinha, Sabélio Mercados</p>
+        </div>
+        <div class="bg-[#FFF7EE] border rounded-lg shadow p-4">
+          <img src="https://source.unsplash.com/400x300/?bakery" alt="Padaria Bom Pão" class="rounded mb-3">
+          <h4 class="text-xl font-semibold">Padaria Bom Pão</h4>
+          <p class="text-[#5C4033] text-sm">Rua Pão Doce, Saudare Pães</p>
+        </div>
+        <div class="bg-[#FFF7EE] border rounded-lg shadow p-4">
+          <img src="https://source.unsplash.com/400x300/?pharmacy" alt="Drogaria Saúde" class="rounded mb-3">
+          <h4 class="text-xl font-semibold">Drogaria Saúde</h4>
+          <p class="text-[#5C4033] text-sm">Rua Arana Cessan, Driege, Parimacial</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cadastrar -->
+  <section id="cadastrar" class="bg-[#FFF7EE] py-16 px-4">
+    <div class="max-w-xl mx-auto">
+      <h3 class="text-3xl font-bold text-center mb-6">Cadastrar Comércio</h3>
+      <form class="space-y-4">
+        <input type="text" placeholder="Nome do Comércio" class="w-full px-4 py-2 border border-[#D6BFA4] rounded-md" required>
+        <input type="text" placeholder="Endereço" class="w-full px-4 py-2 border border-[#D6BFA4] rounded-md" required>
+        <input type="email" placeholder="Email de Contato" class="w-full px-4 py-2 border border-[#D6BFA4] rounded-md" required>
+        <input type="tel" placeholder="Telefone" class="w-full px-4 py-2 border border-[#D6BFA4] rounded-md" required>
+        <button type="submit" class="bg-[#217CA3] text-white px-6 py-2 rounded hover:bg-[#1A5E82]">Cadastrar</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Login -->
+  <section id="login" class="bg-white py-16 px-4">
+    <div class="max-w-md mx-auto">
+      <h3 class="text-3xl font-bold text-center mb-6">Login</h3>
+      <form class="space-y-4">
+        <input type="email" placeholder="Email" class="w-full px-4 py-2 border border-[#D6BFA4] rounded-md" required>
+        <input type="password" placeholder="Senha" class="w-full px-4 py-2 border border-[#D6BFA4] rounded-md" required>
+        <button type="submit" class="bg-[#217CA3] text-white px-6 py-2 rounded hover:bg-[#1A5E82]">Entrar</button>
+      </form>
+    </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-[#294034] text-white p-8 text-center rounded-t-2xl">
+  <footer class="bg-[#2E4A3D] text-white text-center py-6" id="contato">
     <p class="mb-2">Contato: contato@portaldobairro.com</p>
-    <div class="space-x-4">
-      <a href="#" class="hover:underline">Instagram</a>
-      <a href="#" class="hover:underline">Facebook</a>
+    <div class="flex justify-center space-x-4">
+      <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" class="w-5 h-5">
+      </a>
+      <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram" class="w-5 h-5">
+      </a>
     </div>
   </footer>
 </body>
