@@ -1,11 +1,11 @@
-/* Layout container geral */
+/* Container centralizado */
 .container {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 0 1rem;
 }
 
-/* Navbar interna */
+/* Navbar estruturada */
 .navbar-container {
   display: flex;
   justify-content: space-between;
@@ -19,6 +19,7 @@
 .hero {
   max-width: 700px;
   margin: 0 auto;
+  text-align: center;
   padding: 3rem 1rem;
 }
 
