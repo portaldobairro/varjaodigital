@@ -1,96 +1,39 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portal do Bairro</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+<header>
+  <div class="navbar-container">
+    <h1>PORTAL DO BAIRRO</h1>
+    <nav>
+      <a href="#">Início</a>
+      <a href="#comercios">Comércios</a>
+      <a href="#cadastrar">Login</a>
+      <a href="#cadastrar">Cadastro</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </div>
+</header>
 
-  <!-- Navbar -->
-  <header>
-    <div class="navbar-container">
-      <h1>PORTAL DO BAIRRO</h1>
-      <nav>
-        <a href="#">Início</a>
-        <a href="#comercios">Comércios</a>
-        <a href="#cadastrar">Login</a>
-        <a href="#cadastrar">Cadastro</a>
-        <a href="#contato">Contato</a>
-      </nav>
+<section style="background: linear-gradient(to right, #FFECE2, #FFE0D1);">
+  <div class="hero">
+    <h2>Descubra os comércios do Varjão</h2>
+    <p>Encontre comércios locais e apoie os empreendedores da sua comunidade.</p>
+    <a href="#comercios" class="btn">Ver comércios</a>
+  </div>
+</section>
+
+<section id="comercios">
+  <div class="container">
+    <h3>Comércios Locais</h3>
+    <div class="filtros">
+      <input type="text" placeholder="Buscar comércios">
+      <select>
+        <option>Todos os setores</option>
+        <option>Alimentação</option>
+        <option>Mercados</option>
+        <option>Saúde</option>
+        <option>Serviços</option>
+      </select>
     </div>
-  </header>
-
-  <!-- Hero -->
-  <section style="background: linear-gradient(to right, #FFECE2, #FFE0D1); text-align: center;">
-    <div class="hero">
-      <h2>Descubra os comércios do Varjão</h2>
-      <p>Encontre comércios locais e apoie os empreendedores da sua comunidade.</p>
-      <a href="#comercios" class="btn">Ver comércios</a>
+    <div class="comercio-grid">
+      <!-- Cards aqui -->
     </div>
-  </section>
-
-  <!-- Sobre o Projeto -->
-  <section id="sobre">
-    <div class="container">
-      <h3>Sobre o Projeto</h3>
-      <p>
-        O <strong>Portal do Bairro</strong> é uma plataforma criada para fortalecer os comércios locais do Varjão. Nosso objetivo é conectar consumidores a empreendedores da região, promovendo o desenvolvimento local.
-      </p>
-    </div>
-  </section>
-
-  <!-- Comércios Locais -->
-  <section id="comercios">
-    <div class="container">
-      <h3>Comércios Locais</h3>
-
-      <div class="filtros">
-        <input type="text" placeholder="Buscar comércios">
-        <select>
-          <option>Todos os setores</option>
-          <option>Alimentação</option>
-          <option>Mercados</option>
-          <option>Saúde</option>
-          <option>Serviços</option>
-        </select>
-      </div>
-
-      <div class="comercio-grid">
-        <div class="comercio-card">
-          <img src="https://source.unsplash.com/400x300/?market" alt="Mercado Central">
-          <h4>Mercado Central</h4>
-          <p>Rua da Lajinha, Sabélio Mercados</p>
-        </div>
-        <div class="comercio-card">
-          <img src="https://source.unsplash.com/400x300/?bakery" alt="Padaria Bom Pão">
-          <h4>Padaria Bom Pão</h4>
-          <p>Rua Pão Doce, Saudare Pães</p>
-        </div>
-        <div class="comercio-card">
-          <img src="https://source.unsplash.com/400x300/?pharmacy" alt="Drogaria Saúde">
-          <h4>Drogaria Saúde</h4>
-          <p>Rua Arana Cessan, Driege, Parimacial</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer id="contato">
-    <p>Contato: contato@portaldobairro.com</p>
-    <div>
-      <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
-      </a>
-      <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-        <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram">
-      </a>
-    </div>
-    <p>© 2025 Portal do Bairro. Todos os direitos reservados.</p>
-  </footer>
-
-</body>
-</html>
+  </div>
+</section>
