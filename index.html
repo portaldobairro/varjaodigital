@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portal do Bairro</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="estilo.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <!-- Navbar -->
@@ -23,14 +23,14 @@
   </header>
 
   <!-- Hero -->
-  <section class="hero" style="background: linear-gradient(to right, #FFECE2, #FFE0D1);">
+  <section class="hero">
     <h2>Descubra os comércios do Varjão</h2>
     <p>Encontre comércios locais e apoie os empreendedores da sua comunidade.</p>
     <a href="#comercios" class="btn">Ver comércios</a>
   </section>
 
   <!-- Sobre o Projeto -->
-  <section id="sobre" style="background-color: #FFF7EE;">
+  <section id="sobre" class="sobre">
     <div class="container text-center">
       <h3>Sobre o Projeto</h3>
       <p>
@@ -40,7 +40,7 @@
   </section>
 
   <!-- Comércios Locais -->
-  <section id="comercios">
+  <section id="comercios" class="comercios">
     <div class="container">
       <h3>Comércios Locais</h3>
       <div class="filtros">
@@ -75,8 +75,8 @@
 
   <!-- Footer -->
   <footer id="contato">
-    <p class="mb-2">Contato: contato@portaldobairro.com</p>
-    <div class="flex justify-center space-x-4">
+    <p>Contato: contato@portaldobairro.com</p>
+    <div class="social">
       <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
         <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
       </a>
@@ -84,7 +84,7 @@
         <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram">
       </a>
     </div>
-    <p class="mt-4 text-sm">© 2025 Portal do Bairro. Todos os direitos reservados.</p>
+    <p class="footer-copy">© 2025 Portal do Bairro. Todos os direitos reservados.</p>
   </footer>
 </body>
 </html>
