@@ -4,84 +4,82 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portal do Bairro</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/estilo.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <!-- Navbar -->
   <header class="navbar">
     <div class="container">
-      <h1 class="logo">Portal do Bairro</h1>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="#">Início</a></li>
-          <li><a href="#comercios">Comércios</a></li>
-          <li><a href="#login">Login</a></li>
-          <li><a href="#cadastro">Cadastro</a></li>
-          <li><a href="#contato">Contato</a></li>
-        </ul>
+      <h1 class="logo">PORTAL DO BAIRRO</h1>
+      <nav class="nav-links">
+        <a href="#">Início</a>
+        <a href="#comercios">Comércios</a>
+        <a href="#cadastrar">Login</a>
+        <a href="#cadastrar">Cadastro</a>
+        <a href="#contato">Contato</a>
       </nav>
     </div>
   </header>
 
   <!-- Hero -->
   <section class="hero">
-    <div class="container hero-content">
+    <div class="hero-content">
       <h2>Descubra os comércios do Varjão</h2>
-      <p>Encontre e apoie os empreendedores da sua comunidade.</p>
-      <a href="#comercios" class="btn btn-primary">Ver comércios</a>
+      <p>Encontre comércios locais e apoie os empreendedores da sua comunidade.</p>
+      <a href="#comercios" class="btn">Ver comércios</a>
     </div>
   </section>
 
   <!-- Sobre o Projeto -->
-  <section class="sobre">
+  <section id="sobre" class="section sobre">
     <div class="container">
       <h3>Sobre o Projeto</h3>
       <p>
-        O <strong>Portal do Bairro</strong> é uma iniciativa para fortalecer os comércios locais do Varjão. Conectamos consumidores e empreendedores para promover o desenvolvimento local.
+        O <strong>Portal do Bairro</strong> é uma plataforma criada para fortalecer os comércios locais do Varjão. Nosso objetivo é conectar consumidores a empreendedores da região, promovendo o desenvolvimento local.
       </p>
     </div>
   </section>
 
   <!-- Comércios Locais -->
-  <section id="comercios" class="comercios">
+  <section id="comercios" class="section comercios">
     <div class="container">
       <h3>Comércios Locais</h3>
       <div class="filtros">
-        <input type="text" id="buscaComercio" placeholder="Buscar comércios">
+        <input type="text" placeholder="Buscar comércios" id="buscaInput">
         <select id="filtroSetor">
-          <option value="todos">Todos os setores</option>
-          <option value="Alimentação">Alimentação</option>
-          <option value="Mercados">Mercados</option>
-          <option value="Saúde">Saúde</option>
-          <option value="Serviços">Serviços</option>
+          <option>Todos os setores</option>
+          <option>Alimentação</option>
+          <option>Mercados</option>
+          <option>Saúde</option>
+          <option>Serviços</option>
         </select>
       </div>
-      <div class="comercio-grid" id="listaComercios">
-        <div class="comercio-card" data-setor="Mercados">
+      <div class="cards">
+        <div class="card" data-setor="Mercados">
           <img src="https://source.unsplash.com/400x300/?market" alt="Mercado Central">
           <h4>Mercado Central</h4>
-          <p>Rua da Lajinha</p>
+          <p>Rua da Lajinha, Sabélio Mercados</p>
         </div>
-        <div class="comercio-card" data-setor="Alimentação">
+        <div class="card" data-setor="Alimentação">
           <img src="https://source.unsplash.com/400x300/?bakery" alt="Padaria Bom Pão">
           <h4>Padaria Bom Pão</h4>
-          <p>Rua Pão Doce</p>
+          <p>Rua Pão Doce, Saudare Pães</p>
         </div>
-        <div class="comercio-card" data-setor="Saúde">
+        <div class="card" data-setor="Saúde">
           <img src="https://source.unsplash.com/400x300/?pharmacy" alt="Drogaria Saúde">
           <h4>Drogaria Saúde</h4>
-          <p>Rua Arana Cessan</p>
+          <p>Rua Arana Cessan, Driege, Parimacial</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="footer" id="contato">
+  <footer id="contato" class="footer">
     <div class="container">
       <p>Contato: contato@portaldobairro.com</p>
-      <div class="social">
+      <div class="social-icons">
         <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
           <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
         </a>
@@ -93,28 +91,6 @@
     </div>
   </footer>
 
-  <script>
-    const busca = document.getElementById('buscaComercio');
-    const filtro = document.getElementById('filtroSetor');
-    const cards = document.querySelectorAll('.comercio-card');
-
-    function filtrarComercios() {
-      const texto = busca.value.toLowerCase();
-      const setor = filtro.value;
-
-      cards.forEach(card => {
-        const nome = card.querySelector('h4').textContent.toLowerCase();
-        const setorCard = card.getAttribute('data-setor');
-
-        const condicaoTexto = nome.includes(texto);
-        const condicaoSetor = setor === 'todos' || setor === setorCard;
-
-        card.style.display = condicaoTexto && condicaoSetor ? 'block' : 'none';
-      });
-    }
-
-    busca.addEventListener('input', filtrarComercios);
-    filtro.addEventListener('change', filtrarComercios);
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
