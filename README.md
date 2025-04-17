@@ -1,4 +1,8 @@
-## Hi there 👋
+## Bem-vindo(a) ao meu Projeto Portal do Bairro 👋
+
+- 🤔 O site está em desenvolvimento
+- 💬 https://portaldobairro.vercel.app/
+- 📫 Sugestões? Contate-nos pelo site
 
 <!--
 **portaldobairro/portaldobairro** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
