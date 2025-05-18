@@ -1,12 +1,17 @@
-/* Corpo e fundo */
+/* Reset básico e estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #F9F9F9; /* Cor de fundo suave */
-    color: #333333; /* Texto principal */
+    background-color: #F9F9F9;
+    color: #333333;
     line-height: 1.6;
 }
 
-/* Container */
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -15,34 +20,69 @@ body {
 
 /* Header */
 .header {
-    background-color: #1D3557; /* Azul Escuro para o cabeçalho */
+    background-color: #1D3557;
     padding: 20px 0;
 }
 
-/* Logo */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
 .logo {
     font-size: 1.5rem;
     font-weight: 600;
     text-decoration: none;
-    color: #F1FAEE; /* Cor de destaque: Branco */
+    color: #F1FAEE;
 }
 
-/* Links de navegação */
+.nav-list {
+    list-style: none;
+    display: flex; /* Para os itens ficarem lado a lado */
+    gap: 20px;
+}
+
+.nav-list li {
+    display: inline-block;
+}
+
 .nav-list a {
     text-decoration: none;
-    color: #F1FAEE; /* Cor de destaque para links */
+    color: #F1FAEE;
     font-weight: 500;
+    font-size: 1rem;
 }
 
-/* Hero Section */
+/* Botão de menu para dispositivos móveis */
+.nav-toggle {
+    display: none;
+    cursor: pointer;
+}
+
 .hero {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://source.unsplash.com/1600x900/?localbusiness') center/cover no-repeat;
-    color: #F1FAEE; /* Texto claro sobre fundo escuro */
+    color: #F1FAEE;
     text-align: center;
     padding: 100px 0;
 }
 
-/* Botões */
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
 .btn {
     display: inline-block;
     padding: 12px 24px;
@@ -52,22 +92,22 @@ body {
 }
 
 .btn-primary {
-    background-color: #E63946; /* Cor vibrante para botões */
+    background-color: #E63946;
     color: #fff;
 }
 
 .btn-primary:hover {
-    background-color: #D62828; /* Cor mais escura no hover */
+    background-color: #D62828;
 }
 
 .btn-secondary {
-    background-color: #F1FAEE; /* Branco para botões secundários */
-    color: #1D3557; /* Azul escuro para o texto */
+    background-color: #F1FAEE;
+    color: #1D3557;
     border: 2px solid #1D3557;
 }
 
 .btn-secondary:hover {
-    background-color: #E63946; /* Cor de destaque para hover */
+    background-color: #E63946;
     color: #fff;
 }
 
@@ -80,7 +120,7 @@ body {
 .sobre h3, .comercios h3 {
     font-size: 2.5rem;
     margin-bottom: 20px;
-    color: #1D3557; /* Cor azul escuro */
+    color: #1D3557;
 }
 
 .sobre p, .comercios p {
@@ -111,7 +151,7 @@ body {
 .card h4 {
     padding: 20px;
     margin-bottom: 10px;
-    color: #1D3557; /* Azul Escuro */
+    color: #1D3557;
 }
 
 .card p {
@@ -121,7 +161,7 @@ body {
 
 /* Footer */
 .footer {
-    background-color: #1D3557; /* Azul escuro para o rodapé */
+    background-color: #1D3557;
     color: #fff;
     text-align: center;
     padding: 20px 0;
@@ -139,5 +179,24 @@ body {
 @media (max-width: 768px) {
     .nav-list {
         display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #1D3557;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .nav-list li {
+        margin: 10px 0;
+    }
+
+    .nav-toggle {
+        display: block;
     }
 }
