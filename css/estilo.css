@@ -1,183 +1,220 @@
-/* Resetando alguns padrões */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* estilo.css para Varjão Digital - Layout e Responsividade */
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f6f8;
+  color: #333;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
+header.topo, header.header {
+  background-color: #004d40;
+  color: white;
+  padding: 1rem 2rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-/* Barra de navegação */
-header {
-    background-color: #333;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
+header.topo h1, header.header h1 {
+  margin: 0;
+  font-size: 2rem;
+  letter-spacing: 1px;
 }
 
-.container {
-    width: 90%;
-    margin: 0 auto;
-    max-width: 1200px;
+header.header p.subtitulo {
+  font-weight: 300;
+  margin-top: 0.5rem;
 }
 
-/* Menu de navegação */
-.nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.container-index {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  gap: 1.5rem;
 }
 
-.nav-list {
-    list-style: none;
-    display: flex;
+.botao-destaque, .botao-secundario {
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.2rem;
+  width: 220px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  user-select: none;
 }
 
-.nav-list li {
-    margin: 0 15px;
+.botao-destaque {
+  background-color: #00796b;
+  color: white;
+  border: none;
 }
 
-.nav-list a {
-    color: #fff;
-    font-weight: bold;
-    text-transform: uppercase;
-    padding: 10px;
-    transition: color 0.3s ease;
+.botao-destaque:hover {
+  background-color: #004d40;
 }
 
-.nav-list a:hover {
-    color: #f5a623;
+.botao-secundario {
+  background-color: #cfd8dc;
+  color: #37474f;
+  border: none;
 }
 
-.logo {
-    font-size: 1.5em;
-    color: #fff;
+.botao-secundario:hover {
+  background-color: #b0bec5;
 }
 
-/* Estilo para a seção hero */
-.hero {
-    background-color: #217CA3;
-    color: white;
-    padding: 100px 0 60px;
-    text-align: center;
+.tela-login, .tela-inicial {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f6f8;
 }
 
-.hero-content {
-    max-width: 600px;
-    margin: 0 auto;
+.login-container {
+  background: white;
+  padding: 2rem 3rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 320px;
 }
 
-.hero h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
+.login-container h1 {
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  color: #004d40;
+  text-align: center;
 }
 
-.hero p {
-    font-size: 1.2em;
-    margin-bottom: 30px;
+.form-login label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 600;
 }
 
-.hero .btn {
-    background-color: #f5a623;
-    padding: 12px 25px;
-    color: white;
-    border-radius: 5px;
-    text-transform: uppercase;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
+.form-login input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.3rem;
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  box-sizing: border-box;
 }
 
-.hero .btn:hover {
-    background-color: #d68e20;
+.form-login button {
+  margin-top: 1.5rem;
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #00796b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-/* Estilo para o rodapé */
-footer {
-    background-color: #333;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-    margin-top: 40px;
+.form-login button:hover {
+  background-color: #004d40;
 }
 
-footer .footer-copy {
-    font-size: 14px;
-    margin-top: 10px;
+.texto-secundario {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #555;
 }
 
-/* Formulários e outros estilos */
-input, select, button {
-    padding: 10px;
-    width: 100%;
-    margin-bottom: 15px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
+.texto-secundario a {
+  color: #00796b;
+  text-decoration: none;
+  font-weight: 600;
 }
 
-button {
-    background-color: #f5a623;
-    color: white;
-    cursor: pointer;
+.texto-secundario a:hover {
+  text-decoration: underline;
 }
 
-button:hover {
-    background-color: #d68e20;
+.filtros {
+  margin: 1rem 2rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-/* Estilo para a página de comércios */
-.commercios-page .card {
-    display: inline-block;
-    width: 100%;
-    padding: 15px;
-    background-color: white;
-    margin-bottom: 30px;
-    border-radius: 5px;
+.filtros input[type="text"], .filtros select {
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  min-width: 200px;
+  box-sizing: border-box;
 }
 
-.commercios-page .card img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
+.lista-comercios {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 0 2rem 2rem 2rem;
 }
 
-.commercios-page .card h4 {
-    margin-top: 10px;
-    font-size: 1.2em;
+.card-comercio {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.card-comercio:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.card-comercio h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: #00796b;
+}
+
+.card-comercio p.setor {
+  font-weight: 600;
+  color: #555;
+  margin: 0;
+}
+
+.card-comercio p.endereco, .card-comercio p.telefone {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #777;
 }
 
 /* Responsividade */
-@media (max-width: 768px) {
-    .nav-list {
-        flex-direction: column;
-        margin-top: 20px;
-    }
 
-    .nav-list li {
-        margin-bottom: 10px;
-    }
+@media (max-width: 600px) {
+  .filtros {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .hero {
-        padding: 60px 0 40px;
-    }
+  .lista-comercios {
+    grid-template-columns: 1fr;
+    padding: 0 1rem 1rem 1rem;
+  }
 
-    .hero h1 {
-        font-size: 2em;
-    }
-
-    .hero p {
-        font-size: 1em;
-    }
+  .botao-destaque, .botao-secundario {
+    width: 100%;
+  }
 }
