@@ -4,36 +4,53 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Varjão Digital</title>
-  <link rel="stylesheet" href="css/estilo.css" />
-  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="css/estilo.css">
+  <script src="js/script.js" defer></script>
 </head>
 <body>
+  <!-- Cabeçalho com Menu -->
   <header class="header">
-    <div class="container nav-container">
-      <a href="index.html" class="logo">VARJÃO DIGITAL</a>
-      <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
-      <ul class="nav-list">
-        <li><a href="index.html">Início</a></li>
-        <li><a href="comercios.html">Comércios</a></li>
-        <li><a href="login.html">Login</a></li>
-        <li><a href="cadastrar.html">Cadastro</a></li>
-        <li><a href="contato.html">Contato</a></li>
-      </ul>
+    <div class="container">
+      <nav class="nav">
+        <a href="index.html" class="logo">VARJÃO DIGITAL</a>
+        <button class="menu-toggle" aria-label="Abrir Menu">&#9776;</button>
+        <ul class="nav-list">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="comercios.html">Comércios</a></li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="cadastrar.html">Cadastro</a></li>
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
+  <!-- Seção Principal -->
   <section class="hero">
-    <div class="hero-content">
-      <h1>Bem-vindo ao Varjão Digital</h1>
-      <p>Conectando a comunidade aos melhores comércios do Varjão.</p>
-      <a href="comercios.html" class="btn">Ver comércios</a>
+    <div class="container hero-content">
+      <h1>Descubra os Comércios do Varjão</h1>
+      <p>Encontre mercados, padarias, serviços e muito mais, tudo no seu bairro.</p>
+      <a href="comercios.html" class="btn">Ver Comércios</a>
     </div>
   </section>
 
+  <!-- Seção de Destaques -->
+  <section class="section destaque">
+    <div class="container">
+      <h3>Por que usar o Varjão Digital?</h3>
+      <ul class="beneficios">
+        <li>✔ Acesso rápido a comércios locais</li>
+        <li>✔ Filtro por categorias e busca inteligente</li>
+        <li>✔ Simples, gratuito e atualizado</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
   <footer class="footer">
     <div class="container">
-      <p>Contato: varjaodigital@gmail.com</p>
-      <p class="footer-copy">&copy; 2025 Varjão Digital. Todos os direitos reservados.</p>
+      <p>Contato: <a href="mailto:varjaodigital@gmail.com">varjaodigital@gmail.com</a></p>
+      <p class="footer-copy">© 2025 Varjão Digital. Todos os direitos reservados.</p>
     </div>
   </footer>
 </body>
