@@ -2,30 +2,49 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Comércios - Varjão Digital</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Varjão Digital - Comércios</title>
   <link rel="stylesheet" href="css/estilo.css" />
-  <script src="js/comercios.js" defer></script>
 </head>
 <body>
-
-  <header class="topo">
-    <h1>Comércios do Varjão Digital</h1>
+  <header>
+    <div class="logo">Varjão Digital</div>
+    <nav>
+      <ul id="nav-list">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="comercios.html" class="active">Comércios</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+      </ul>
+      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+    </nav>
   </header>
 
-  <section class="filtros">
-    <input type="text" id="busca" placeholder="Buscar por nome..." />
-    <select id="filtro-setor">
-      <option value="">Todos os Setores</option>
-      <option value="Alimentação">Alimentação</option>
-      <option value="Serviços">Serviços</option>
-      <option value="Lazer">Lazer</option>
-    </select>
-  </section>
+  <main>
+    <h2>Lista de Comércios</h2>
 
-  <main id="lista-comercios" class="lista-comercios">
-    <!-- Os cards de comércios serão inseridos aqui via JS -->
+    <section class="filters">
+      <input type="text" id="buscaComercio" placeholder="Buscar comércio..." />
+      <select id="filtroSetor">
+        <option value="">Todos os setores</option>
+        <option value="alimentacao">Alimentação</option>
+        <option value="vestuario">Vestuário</option>
+        <option value="servicos">Serviços</option>
+        <option value="saude">Saúde</option>
+        <option value="lazer">Lazer</option>
+      </select>
+    </section>
+
+    <section class="cards-container" id="cardsContainer">
+      <!-- Cards dos comércios serão inseridos pelo JavaScript -->
+    </section>
   </main>
 
+  <footer>
+    &copy; 2025 Varjão Digital. Todos os direitos reservados.
+  </footer>
+
+  <script src="js/menu.js"></script>
+  <script src="js/comercios.js"></script>
 </body>
 </html>
