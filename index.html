@@ -1,40 +1,97 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Varjão Digital - Início</title>
-  <link rel="stylesheet" href="css/estilo.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Guia digital de comércios e serviços no Varjão, Brasília">
+  <title>Varjão Digital - Seu guia local</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/estilo.css">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
 </head>
 <body>
-  <header>
-    <div class="logo">Varjão Digital</div>
-    <nav>
-      <ul id="nav-list">
-        <li><a href="index.html" class="active">Início</a></li>
-        <li><a href="comercios.html">Comércios</a></li>
-        <li><a href="login.html">Login</a></li>
-        <li><a href="sobre.html">Sobre</a></li>
-      </ul>
-      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
-    </nav>
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="logo">Varjão Digital</a>
+      
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-label="Menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      
+      <nav class="nav" id="mainNav">
+        <ul>
+          <li><a href="index.html" class="active"><i class="fas fa-home"></i> Início</a></li>
+          <li><a href="comercios.html"><i class="fas fa-store"></i> Comércios</a></li>
+          <li><a href="sobre.html"><i class="fas fa-info-circle"></i> Sobre</a></li>
+          <li><a href="login.html"><i class="fas fa-user"></i> Login</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main>
+  <main class="main">
     <section class="hero">
-      <h1>Bem-vindo ao Varjão Digital</h1>
-      <p>Seu guia digital para comércios e lazer no Varjão, Brasília.</p>
-      <div class="btn-group">
-        <a href="comercios.html" class="btn">Ver Comércios</a>
-        <a href="sobre.html" class="btn">Saiba Mais</a>
+      <div class="container">
+        <h1>Bem-vindo ao Varjão Digital</h1>
+        <p>Seu guia completo de comércios e serviços no Varjão, Brasília</p>
+        <div class="cta-buttons">
+          <a href="comercios.html" class="btn btn-primary">
+            <i class="fas fa-store"></i> Explorar Comércios
+          </a>
+          <a href="sobre.html" class="btn btn-secondary">
+            <i class="fas fa-info-circle"></i> Saiba Mais
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="destaques">
+      <div class="container">
+        <h2>Comércios em Destaque</h2>
+        <div class="cards-grid" id="destaquesContainer">
+          <!-- Preenchido por JavaScript -->
+        </div>
       </div>
     </section>
   </main>
 
-  <footer>
-    &copy; 2025 Varjão Digital. Todos os direitos reservados.
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-info">
+          <h3>Varjão Digital</h3>
+          <p>O guia completo do comércio local no Varjão, Brasília</p>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Links Rápidos</h4>
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="comercios.html">Comércios</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact">
+          <h4>Contato</h4>
+          <p><i class="fas fa-envelope"></i> contato@varjaodigital.com.br</p>
+          <p><i class="fas fa-phone"></i> (61) 99999-9999</p>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2023 Varjão Digital. Todos os direitos reservados.</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
   </footer>
 
   <script src="js/menu.js"></script>
+  <script src="js/destaques.js"></script>
 </body>
 </html>
