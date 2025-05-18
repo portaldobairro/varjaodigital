@@ -9,8 +9,10 @@ body {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
     color: #333;
+    background-color: #f4f4f4; /* Cor de fundo clara para o site */
 }
 
+/* Container padrão para todos os elementos */
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -49,6 +51,11 @@ body {
     text-decoration: none;
     color: #333;
     font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-list a:hover {
+    color: #007bff; /* Cor de destaque ao passar o mouse */
 }
 
 /* Botões */
@@ -68,6 +75,7 @@ body {
 .btn-secondary {
     background-color: #fff;
     color: #007bff;
+    border: 2px solid #007bff;
 }
 
 /* Footer */
@@ -95,6 +103,11 @@ body {
 /* Responsividade */
 @media (max-width: 768px) {
     .nav-list {
-        display: none;
+        display: none; /* Esconde a lista de navegação em telas pequenas */
+    }
+
+    .nav-toggle {
+        display: block; /* Exibe o botão de menu em telas pequenas */
     }
 }
+
