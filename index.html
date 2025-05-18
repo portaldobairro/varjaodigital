@@ -4,25 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Varjão Digital</title>
-    <link rel="stylesheet" href="css/estilo.css"> <!-- Arquivo global -->
-    <link rel="stylesheet" href="css/index.css"> <!-- Estilo específico -->
+    <link rel="stylesheet" href="css/estilo.css">
 </head>
-<body>
+<body class="index-page">
     <header class="header">
         <div class="container">
             <nav class="nav">
                 <a href="#" class="logo">VARJÃO DIGITAL</a>
                 <ul class="nav-list">
-                    <li><a href="#">Início</a></li>
-                    <li><a href="#comercios">Comércios</a></li>
-                    <li><a href="#login">Login</a></li>
-                    <li><a href="#cadastro">Cadastro</a></li>
-                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="comercios.html">Comércios</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="cadastrar.html">Cadastro</a></li>
+                    <li><a href="contato.html">Contato</a></li>
                 </ul>
-                <!-- Botão de menu para dispositivos móveis -->
-                <div class="nav-toggle" onclick="toggleMenu()">
-                    <span>&#9776;</span> <!-- Ícone de hambúrguer -->
-                </div>
             </nav>
         </div>
     </header>
@@ -37,49 +32,7 @@
         </div>
     </section>
 
-    <section id="sobre" class="section sobre">
-        <div class="container">
-            <h3>Sobre o Projeto</h3>
-            <p>
-                O <strong>Varjão Digital</strong> é uma plataforma criada para fortalecer os comércios locais do Varjão. Nosso objetivo é conectar consumidores a empreendedores da região, promovendo o desenvolvimento local.
-            </p>
-        </div>
-    </section>
-
-    <section id="comercios" class="section comercios">
-        <div class="container">
-            <h3>Comércios Locais</h3>
-            <div class="filtros">
-                <input type="text" placeholder="Buscar comércios" id="buscaInput">
-                <select id="filtroSetor">
-                    <option>Todos os setores</option>
-                    <option>Alimentação</option>
-                    <option>Mercados</option>
-                    <option>Saúde</option>
-                    <option>Serviços</option>
-                </select>
-            </div>
-            <div class="cards">
-                <article class="card" data-setor="Mercados">
-                    <img src="https://source.unsplash.com/400x300/?market" alt="Mercado Central">
-                    <h4>Mercado Central</h4>
-                    <p>Rua da Lajinha, Sabélio Mercados</p>
-                </article>
-                <article class="card" data-setor="Alimentação">
-                    <img src="https://source.unsplash.com/400x300/?bakery" alt="Padaria Bom Pão">
-                    <h4>Padaria Bom Pão</h4>
-                    <p>Rua Pão Doce, Saudare Pães</p>
-                </article>
-                <article class="card" data-setor="Saúde">
-                    <img src="https://source.unsplash.com/400x300/?pharmacy" alt="Drogaria Saúde">
-                    <h4>Drogaria Saúde</h4>
-                    <p>Rua Arana Cessan, Driege, Parimacial</p>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <footer id="contato" class="footer">
+    <footer>
         <div class="container">
             <p>Contato: contato@varjaodigital.com</p>
             <div class="social-icons">
@@ -93,7 +46,5 @@
             <p class="footer-copy">© 2025 Varjão Digital. Todos os direitos reservados.</p>
         </div>
     </footer>
-
-    <script src="js/script.js"></script>
 </body>
 </html>
