@@ -2,29 +2,30 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Comércios do Varjão</title>
-  <link href="estilo.css" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Comércios - Varjão Digital</title>
+  <link rel="stylesheet" href="css/estilo.css" />
+  <script src="js/comercios.js" defer></script>
 </head>
 <body>
-  <h1>Comércios do Varjão</h1>
 
-  <section class="filtros" aria-label="Filtros de busca e setor">
-    <input type="search" id="busca" placeholder="Buscar por nome..." aria-label="Buscar comércio por nome" />
-    <select id="filtro-setor" aria-label="Filtrar por setor">
-      <option value="">Todos os setores</option>
+  <header class="topo">
+    <h1>Comércios do Varjão Digital</h1>
+  </header>
+
+  <section class="filtros">
+    <input type="text" id="busca" placeholder="Buscar por nome..." />
+    <select id="filtro-setor">
+      <option value="">Todos os Setores</option>
       <option value="Alimentação">Alimentação</option>
       <option value="Serviços">Serviços</option>
-      <option value="Vestuário">Vestuário</option>
       <option value="Lazer">Lazer</option>
-      <option value="Saúde">Saúde</option>
     </select>
   </section>
 
-  <section class="cards-container" id="lista-comercios" aria-live="polite">
-    <!-- Cards gerados via JavaScript -->
-  </section>
+  <main id="lista-comercios" class="lista-comercios">
+    <!-- Os cards de comércios serão inseridos aqui via JS -->
+  </main>
 
-  <script src="js/comercios.js" defer></script>
 </body>
 </html>
