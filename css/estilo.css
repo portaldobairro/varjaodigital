@@ -109,4 +109,108 @@ body {
     .nav-toggle {
         display: block;
     }
+
+    .hero {
+        padding: 80px 20px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .hero-content {
+        margin: 0 10px;
+    }
+
+    .footer {
+        padding: 10px 0;
+    }
+
+    .social-icons {
+        gap: 10px;
+    }
+
+    .social-icons img {
+        width: 25px;
+    }
 }
+
+/* Estilos específicos do index.html */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://source.unsplash.com/1600x900/?localbusiness') center/cover no-repeat;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* Estilos para a seção de Comércios */
+#comercios {
+    padding: 50px 0;
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: calc(33% - 20px);
+    padding: 20px;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.card h4 {
+    margin-top: 15px;
+    font-size: 1.5rem;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #777;
+}
+
+/* Estilos para a seção de Sobre */
+#sobre {
+    padding: 50px 0;
+}
+
+#sobre h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#sobre p {
+    font-size: 1.2rem;
+}
+
+/* Fim dos estilos específicos do index.html */
