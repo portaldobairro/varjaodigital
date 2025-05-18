@@ -1,7 +1,7 @@
-## Bem-vindo(a) ao meu Projeto Portal do Bairro 👋
+## Bem-vindo(a) ao meu Projeto Varjão Digital 👋
 
 - 🤔 O site está em desenvolvimento
-- 💬 https://portaldobairro.vercel.app/
+- 💬 https://varjaodigital.vercel.app/
 - 📫 Sugestões? Contate-nos pelo site
 
 <!--
