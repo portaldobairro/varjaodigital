@@ -24,4 +24,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   inputBusca.addEventListener("input", filtrarComercios);
   filtroSetor.addEventListener("change", filtrarComercios);
+
+  // Função para alternar o menu de navegação no modo responsivo
+  function toggleMenu() {
+    const navList = document.querySelector('.nav-list');
+    navList.classList.toggle('active');
+  }
+
+  // Não é necessário adicionar mais nada aqui, a função será chamada automaticamente quando o ícone for clicado
 });
