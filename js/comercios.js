@@ -1,74 +1,77 @@
-const comercios = [
-  {
-    nome: "Padaria Pão Quente",
-    setor: "Alimentação",
-    descricao: "Pães fresquinhos todos os dias, bolos e salgados deliciosos.",
-    url: "#"
-  },
-  {
-    nome: "Oficina do João",
-    setor: "Serviços",
-    descricao: "Reparos rápidos em veículos, mecânica e elétrica.",
-    url: "#"
-  },
-  {
-    nome: "Boutique Varjão",
-    setor: "Vestuário",
-    descricao: "Moda feminina e masculina com preços acessíveis.",
-    url: "#"
-  },
-  {
-    nome: "Academia Vida Ativa",
-    setor: "Saúde",
-    descricao: "Equipamentos modernos e aulas de pilates e yoga.",
-    url: "#"
-  },
-  {
-    nome: "Cinema Varjão",
-    setor: "Lazer",
-    descricao: "Os últimos lançamentos e sessões especiais para a família.",
-    url: "#"
-  }
-];
+document.addEventListener('DOMContentLoaded', () => {
+  const comercios = [
+    {
+      nome: "Padaria Pão Doce",
+      setor: "Alimentação",
+      endereco: "Rua das Flores, 123",
+      telefone: "(61) 99999-9999"
+    },
+    {
+      nome: "Oficina Mecânica Silva",
+      setor: "Serviços",
+      endereco: "Av. Principal, 456",
+      telefone: "(61) 98888-8888"
+    },
+    {
+      nome: "Bar do Zé",
+      setor: "Lazer",
+      endereco: "Rua do Lazer, 789",
+      telefone: "(61) 97777-7777"
+    },
+    {
+      nome: "Mercado Varjão",
+      setor: "Alimentação",
+      endereco: "Praça Central, 10",
+      telefone: "(61) 96666-6666"
+    },
+  ];
 
-const listaComercios = document.getElementById('lista-comercios');
-const buscaInput = document.getElementById('busca');
-const filtroSetor = document.getElementById('filtro-setor');
+  const listaComercios = document.getElementById('lista-comercios');
+  const inputBusca = document.getElementById('busca');
+  const selectSetor = document.getElementById('filtro-setor');
 
-function renderizarCards() {
-  const buscaTexto = buscaInput.value.toLowerCase();
-  const setorSelecionado = filtroSetor.value;
-
-  listaComercios.innerHTML = '';
-
-  const filtrados = comercios.filter(comercio => {
-    const nomeMatch = comercio.nome.toLowerCase().includes(buscaTexto);
-    const setorMatch = setorSelecionado === '' || comercio.setor === setorSelecionado;
-    return nomeMatch && setorMatch;
-  });
-
-  if (filtrados.length === 0) {
-    listaComercios.innerHTML = `<p style="text-align:center; color:#666;">Nenhum comércio encontrado.</p>`;
-    return;
-  }
-
-  filtrados.forEach(comercio => {
+  function criarCard(comercio) {
     const card = document.createElement('article');
-    card.className = 'card';
-    card.setAttribute('tabindex', '0');
+    card.classList.add('card-comercio');
 
     card.innerHTML = `
-      <h2>${comercio.nome}</h2>
+      <h3>${comercio.nome}</h3>
       <p class="setor">${comercio.setor}</p>
-      <p>${comercio.descricao}</p>
-      <a href="${comercio.url}" target="_blank" rel="noopener noreferrer">Saiba mais</a>
+      <p class="endereco">${comercio.endereco}</p>
+      <p class="telefone">${comercio.telefone}</p>
     `;
 
-    listaComercios.appendChild(card);
-  });
-}
+    return card;
+  }
 
-buscaInput.addEventListener('input', renderizarCards);
-filtroSetor.addEventListener('change', renderizarCards);
+  function filtrarComercios() {
+    const buscaTexto = inputBusca.value.toLowerCase();
+    const setorSelecionado = selectSetor.value;
 
-renderizarCards();
+    // Limpa a lista
+    listaComercios.innerHTML = '';
+
+    // Filtra e adiciona cards
+    const comerciosFiltrados = comercios.filter(c => {
+      const nomeMatch = c.nome.toLowerCase().includes(buscaTexto);
+      const setorMatch = setorSelecionado === '' || c.setor === setorSelecionado;
+      return nomeMatch && setorMatch;
+    });
+
+    if (comerciosFiltrados.length === 0) {
+      listaComercios.innerHTML = '<p>Nenhum comércio encontrado.</p>';
+      return;
+    }
+
+    comerciosFiltrados.forEach(c => {
+      listaComercios.appendChild(criarCard(c));
+    });
+  }
+
+  // Eventos de filtro
+  inputBusca.addEventListener('input', filtrarComercios);
+  selectSetor.addEventListener('change', filtrarComercios);
+
+  // Inicializa a lista
+  filtrarComercios();
+});
