@@ -1,55 +1,28 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login - Varjão Digital</title>
-    <link rel="stylesheet" href="css/estilo.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login - Varjão Digital</title>
+  <link href="css/estilo.css" rel="stylesheet" />
 </head>
-<body class="login-page">
-    <!-- Barra de navegação -->
-    <header class="header">
-        <div class="container">
-            <nav class="nav">
-                <a href="index.html" class="logo">VARJÃO DIGITAL</a>
-                <ul class="nav-list">
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="comercios.html">Comércios</a></li>
-                    <li><a href="login.html">Login</a></li>
-                    <li><a href="cadastrar.html">Cadastro</a></li>
-                    <li><a href="contato.html">Contato</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<body class="tela-login">
 
-    <!-- Seção de Login -->
-    <section class="section login">
-        <div class="container">
-            <h3 class="login-title">Login</h3>
-            <form class="login-form">
-                <div class="form-group">
-                    <label for="email">E-mail</label>
-                    <input type="email" id="email" placeholder="Digite seu e-mail" required>
-                </div>
-                <div class="form-group">
-                    <label for="senha">Senha</label>
-                    <input type="password" id="senha" placeholder="Digite sua senha" required>
-                </div>
-                <button type="submit" class="btn btn-primary">Entrar</button>
-                <div class="forgot-password">
-                    <a href="#">Esqueceu sua senha?</a>
-                </div>
-            </form>
-        </div>
-    </section>
+  <section class="login-container">
+    <h1>Entrar no Varjão Digital</h1>
 
-    <!-- Rodapé com E-mail -->
-    <footer class="footer">
-        <div class="container">
-            <p>Contato: varjaodigital@gmail.com</p>
-            <p class="footer-copy">© 2025 Varjão Digital. Todos os direitos reservados.</p>
-        </div>
-    </footer>
+    <form class="form-login" action="#" method="post">
+      <label for="email">E-mail</label>
+      <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required />
+
+      <label for="senha">Senha</label>
+      <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required />
+
+      <button type="submit">Entrar</button>
+    </form>
+
+    <p class="texto-secundario">Ainda não tem uma conta? <a href="cadastrar.html">Cadastre-se aqui</a></p>
+  </section>
+
 </body>
 </html>
