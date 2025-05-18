@@ -4,74 +4,83 @@ document.addEventListener('DOMContentLoaded', () => {
       nome: "Padaria Pão Doce",
       setor: "Alimentação",
       endereco: "Rua das Flores, 123",
-      telefone: "(61) 99999-9999"
+      telefone: "(61) 9999-9999",
+      descricao: "Padaria tradicional com pães fresquinhos e doces variados."
     },
     {
-      nome: "Oficina Mecânica Silva",
-      setor: "Serviços",
+      nome: "Beleza no Varjão",
+      setor: "Beleza",
       endereco: "Av. Principal, 456",
-      telefone: "(61) 98888-8888"
+      telefone: "(61) 9888-8888",
+      descricao: "Salão de beleza com cortes, manicure e estética."
     },
     {
-      nome: "Bar do Zé",
-      setor: "Lazer",
-      endereco: "Rua do Lazer, 789",
-      telefone: "(61) 97777-7777"
+      nome: "Colégio Varjão",
+      setor: "Educação",
+      endereco: "Rua da Escola, 789",
+      telefone: "(61) 9777-7777",
+      descricao: "Ensino fundamental e médio com foco em qualidade."
     },
     {
-      nome: "Mercado Varjão",
-      setor: "Alimentação",
-      endereco: "Praça Central, 10",
-      telefone: "(61) 96666-6666"
+      nome: "Clínica Saúde Viva",
+      setor: "Saúde",
+      endereco: "Av. Saúde, 101",
+      telefone: "(61) 9666-6666",
+      descricao: "Atendimento médico e odontológico completo."
     },
+    {
+      nome: "Serviços Rápidos",
+      setor: "Serviços",
+      endereco: "Rua do Comércio, 202",
+      telefone: "(61) 9555-5555",
+      descricao: "Consertos e manutenções rápidas para sua casa."
+    }
   ];
 
-  const listaComercios = document.getElementById('lista-comercios');
-  const inputBusca = document.getElementById('busca');
-  const selectSetor = document.getElementById('filtro-setor');
+  const lista = document.getElementById('listaComercios');
+  const buscaInput = document.getElementById('buscaComercio');
+  const filtroSetor = document.getElementById('filtroSetor');
 
-  function criarCard(comercio) {
-    const card = document.createElement('article');
-    card.classList.add('card-comercio');
+  function exibirComercios(filtrados) {
+    lista.innerHTML = '';
 
-    card.innerHTML = `
-      <h3>${comercio.nome}</h3>
-      <p class="setor">${comercio.setor}</p>
-      <p class="endereco">${comercio.endereco}</p>
-      <p class="telefone">${comercio.telefone}</p>
-    `;
-
-    return card;
-  }
-
-  function filtrarComercios() {
-    const buscaTexto = inputBusca.value.toLowerCase();
-    const setorSelecionado = selectSetor.value;
-
-    // Limpa a lista
-    listaComercios.innerHTML = '';
-
-    // Filtra e adiciona cards
-    const comerciosFiltrados = comercios.filter(c => {
-      const nomeMatch = c.nome.toLowerCase().includes(buscaTexto);
-      const setorMatch = setorSelecionado === '' || c.setor === setorSelecionado;
-      return nomeMatch && setorMatch;
-    });
-
-    if (comerciosFiltrados.length === 0) {
-      listaComercios.innerHTML = '<p>Nenhum comércio encontrado.</p>';
+    if (filtrados.length === 0) {
+      lista.innerHTML = '<p style="text-align:center; color:#777;">Nenhum comércio encontrado.</p>';
       return;
     }
 
-    comerciosFiltrados.forEach(c => {
-      listaComercios.appendChild(criarCard(c));
+    filtrados.forEach(comercio => {
+      const card = document.createElement('div');
+      card.className = 'card';
+
+      card.innerHTML = `
+        <h3>${comercio.nome}</h3>
+        <p><strong>Setor:</strong> ${comercio.setor}</p>
+        <p><strong>Endereço:</strong> ${comercio.endereco}</p>
+        <p><strong>Telefone:</strong> ${comercio.telefone}</p>
+        <p>${comercio.descricao}</p>
+      `;
+
+      lista.appendChild(card);
     });
   }
 
-  // Eventos de filtro
-  inputBusca.addEventListener('input', filtrarComercios);
-  selectSetor.addEventListener('change', filtrarComercios);
+  function filtrarComercios() {
+    const busca = buscaInput.value.toLowerCase();
+    const setor = filtroSetor.value;
 
-  // Inicializa a lista
-  filtrarComercios();
+    const filtrados = comercios.filter(c => {
+      const nomeMatch = c.nome.toLowerCase().includes(busca);
+      const setorMatch = setor === '' || c.setor === setor;
+      return nomeMatch && setorMatch;
+    });
+
+    exibirComercios(filtrados);
+  }
+
+  buscaInput.addEventListener('input', filtrarComercios);
+  filtroSetor.addEventListener('change', filtrarComercios);
+
+  // Exibe todos inicialmente
+  exibirComercios(comercios);
 });
