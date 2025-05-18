@@ -1,4 +1,4 @@
-/* Estilos gerais para o site */
+/* Resetando alguns padrões */
 * {
     margin: 0;
     padding: 0;
@@ -7,8 +7,6 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
     background-color: #f4f4f4;
     color: #333;
 }
@@ -18,10 +16,15 @@ a {
     color: inherit;
 }
 
+/* Barra de navegação */
 header {
-    background-color: #222;
-    color: white;
+    background-color: #333;
     padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
 .container {
@@ -30,6 +33,7 @@ header {
     max-width: 1200px;
 }
 
+/* Menu de navegação */
 .nav {
     display: flex;
     justify-content: space-between;
@@ -45,49 +49,95 @@ header {
     margin: 0 15px;
 }
 
-.nav-toggle {
-    display: none;
-    cursor: pointer;
+.nav-list a {
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px;
+    transition: color 0.3s ease;
 }
 
+.nav-list a:hover {
+    color: #f5a623;
+}
+
+.logo {
+    font-size: 1.5em;
+    color: #fff;
+}
+
+/* Estilo para a seção hero */
 .hero {
     background-color: #217CA3;
     color: white;
-    padding: 80px 0;
+    padding: 100px 0 60px;
     text-align: center;
+}
+
+.hero-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
 }
 
 .hero .btn {
     background-color: #f5a623;
-    padding: 10px 20px;
+    padding: 12px 25px;
     color: white;
     border-radius: 5px;
     text-transform: uppercase;
     font-weight: bold;
+    border: none;
+    cursor: pointer;
 }
 
-.hero .btn-secondary {
-    background-color: #2c3e50;
+.hero .btn:hover {
+    background-color: #d68e20;
 }
 
-/* Estilos para a página inicial */
-.index-page .hero {
-    background-color: #000;
+/* Estilo para o rodapé */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 40px;
 }
 
-/* Estilos para a página de login */
-.login-page .form-group {
-    margin-bottom: 20px;
+footer .footer-copy {
+    font-size: 14px;
+    margin-top: 10px;
 }
 
-.login-page .form-group input {
-    width: 100%;
+/* Formulários e outros estilos */
+input, select, button {
     padding: 10px;
-    border: 1px solid #ddd;
+    width: 100%;
+    margin-bottom: 15px;
     border-radius: 5px;
+    border: 1px solid #ddd;
 }
 
-/* Estilos para a página de comércios */
+button {
+    background-color: #f5a623;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #d68e20;
+}
+
+/* Estilo para a página de comércios */
 .commercios-page .card {
     display: inline-block;
     width: 100%;
@@ -108,24 +158,26 @@ header {
     font-size: 1.2em;
 }
 
-/* Estilos para o footer */
-footer {
-    background-color: #333;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-}
+/* Responsividade */
+@media (max-width: 768px) {
+    .nav-list {
+        flex-direction: column;
+        margin-top: 20px;
+    }
 
-footer .social-icons a {
-    margin: 0 10px;
-}
+    .nav-list li {
+        margin-bottom: 10px;
+    }
 
-footer .social-icons img {
-    width: 20px;
-    height: 20px;
-}
+    .hero {
+        padding: 60px 0 40px;
+    }
 
-footer .footer-copy {
-    font-size: 12px;
-    margin-top: 15px;
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
 }
