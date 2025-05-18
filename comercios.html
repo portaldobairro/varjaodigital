@@ -1,47 +1,102 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Varjão Digital - Comércios</title>
-  <link rel="stylesheet" href="css/estilo.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lista completa de comércios no Varjão, Brasília">
+  <title>Comércios - Varjão Digital</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/estilo.css">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
 </head>
 <body>
-  <header>
-    <div class="logo">Varjão Digital</div>
-    <nav>
-      <ul id="nav-list">
-        <li><a href="index.html">Início</a></li>
-        <li><a href="comercios.html" class="active">Comércios</a></li>
-        <li><a href="login.html">Login</a></li>
-        <li><a href="sobre.html">Sobre</a></li>
-      </ul>
-      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
-    </nav>
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="logo">Varjão Digital</a>
+      
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-label="Menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      
+      <nav class="nav" id="mainNav">
+        <ul>
+          <li><a href="index.html"><i class="fas fa-home"></i> Início</a></li>
+          <li><a href="comercios.html" class="active"><i class="fas fa-store"></i> Comércios</a></li>
+          <li><a href="sobre.html"><i class="fas fa-info-circle"></i> Sobre</a></li>
+          <li><a href="login.html"><i class="fas fa-user"></i> Login</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <h2>Lista de Comércios</h2>
-
-    <section class="filters">
-      <input type="text" id="buscaComercio" placeholder="Buscar comércio..." />
-      <select id="filtroSetor">
-        <option value="">Todos os setores</option>
-        <option value="alimentacao">Alimentação</option>
-        <option value="vestuario">Vestuário</option>
-        <option value="servicos">Serviços</option>
-        <option value="saude">Saúde</option>
-        <option value="lazer">Lazer</option>
-      </select>
-    </section>
-
-    <section class="cards-container" id="cardsContainer">
-      <!-- Cards dos comércios serão inseridos pelo JavaScript -->
-    </section>
+  <main class="main comercios-page">
+    <div class="container">
+      <div class="page-header">
+        <h1>Comércios no Varjão</h1>
+        <p>Encontre os melhores estabelecimentos no seu bairro</p>
+      </div>
+      
+      <div class="filtros">
+        <div class="search-box">
+          <i class="fas fa-search"></i>
+          <input type="text" id="buscaComercio" placeholder="Buscar comércio..." aria-label="Buscar comércio">
+        </div>
+        
+        <select id="filtroCategoria" aria-label="Filtrar por categoria">
+          <option value="">Todas as categorias</option>
+          <option value="alimentacao">Alimentação</option>
+          <option value="vestuario">Vestuário</option>
+          <option value="servicos">Serviços</option>
+          <option value="saude">Saúde</option>
+          <option value="lazer">Lazer</option>
+        </select>
+      </div>
+      
+      <div class="cards-grid" id="comerciosContainer">
+        <!-- Preenchido por JavaScript -->
+      </div>
+    </div>
+    
+    <!-- Modal da Galeria -->
+    <div class="modal" id="galeriaModal">
+      <div class="modal-content">
+        <span class="close-modal" id="closeModal">&times;</span>
+        <img id="modalImage" src="" alt="">
+        <div class="modal-nav">
+          <button id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+          <button id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </div>
   </main>
 
-  <footer>
-    &copy; 2025 Varjão Digital. Todos os direitos reservados.
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-info">
+          <h3>Varjão Digital</h3>
+          <p>O guia completo do comércio local no Varjão, Brasília</p>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Links Rápidos</h4>
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="comercios.html">Comércios</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact">
+          <h4>Contato</h4>
+          <p><i class="fas fa-envelope"></i> varjaodigital@gmail.com</p>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 Varjão Digital. Todos os direitos reservados.</p>
+      </div>
+    </div>
   </footer>
 
   <script src="js/menu.js"></script>
