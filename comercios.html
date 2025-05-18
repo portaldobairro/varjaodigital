@@ -1,53 +1,30 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Comércios - Varjão Digital</title>
-    <link rel="stylesheet" href="css/estilo.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Comércios do Varjão</title>
+  <link href="estilo.css" rel="stylesheet" />
 </head>
 <body>
-    <!-- Barra de navegação -->
-    <header class="header">
-        <div class="container">
-            <nav class="nav">
-                <a href="index.html" class="logo">VARJÃO DIGITAL</a>
-                <ul class="nav-list">
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="comercios.html">Comércios</a></li>
-                    <li><a href="login.html">Login</a></li>
-                    <li><a href="cadastrar.html">Cadastro</a></li>
-                    <li><a href="contato.html">Contato</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+  <h1>Comércios do Varjão</h1>
 
-    <!-- Seção de Comércios -->
-    <section class="section comercios">
-        <div class="container">
-            <h3>Comércios Locais</h3>
-            <div class="comercio-list">
-                <div class="card">
-                    <img src="https://via.placeholder.com/300x200" alt="Comércio 1">
-                    <h4>Mercado Central</h4>
-                    <p>Localização: Rua das Flores, 123</p>
-                </div>
-                <div class="card">
-                    <img src="https://via.placeholder.com/300x200" alt="Comércio 2">
-                    <h4>Padaria Pão Quente</h4>
-                    <p>Localização: Avenida Central, 456</p>
-                </div>
-            </div>
-        </div>
-    </section>
+  <section class="filtros" aria-label="Filtros de busca e setor">
+    <input type="search" id="busca" placeholder="Buscar por nome..." aria-label="Buscar comércio por nome" />
+    <select id="filtro-setor" aria-label="Filtrar por setor">
+      <option value="">Todos os setores</option>
+      <option value="Alimentação">Alimentação</option>
+      <option value="Serviços">Serviços</option>
+      <option value="Vestuário">Vestuário</option>
+      <option value="Lazer">Lazer</option>
+      <option value="Saúde">Saúde</option>
+    </select>
+  </section>
 
-    <!-- Rodapé com E-mail -->
-    <footer class="footer">
-        <div class="container">
-            <p>Contato: varjaodigital@gmail.com</p>
-            <p class="footer-copy">© 2025 Varjão Digital. Todos os direitos reservados.</p>
-        </div>
-    </footer>
+  <section class="cards-container" id="lista-comercios" aria-live="polite">
+    <!-- Cards gerados via JavaScript -->
+  </section>
+
+  <script src="comercios.js" defer></script>
 </body>
 </html>
