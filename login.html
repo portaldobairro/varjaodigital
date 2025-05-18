@@ -1,54 +1,92 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Faça login no Varjão Digital para acessar recursos exclusivos.">
-  <title>Varjão Digital - Login</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Acesse sua conta no Varjão Digital">
+  <title>Login - Varjão Digital</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/estilo.css">
   <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="css/estilo.css" />
 </head>
 <body>
-  <header>
-    <h1 class="logo">Varjão Digital</h1>
-    <nav aria-label="Menu principal">
-      <ul id="nav-list">
-        <li><a href="index.html">Início</a></li>
-        <li><a href="comercios.html">Comércios</a></li>
-        <li><a href="login.html" class="active" aria-current="page">Login</a></li>
-        <li><a href="sobre.html">Sobre</a></li>
-      </ul>
-      <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-label="Abrir menu">&#9776;</button>
-    </nav>
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="logo">Varjão Digital</a>
+      
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-label="Menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      
+      <nav class="nav" id="mainNav">
+        <ul>
+          <li><a href="index.html"><i class="fas fa-home"></i> Início</a></li>
+          <li><a href="comercios.html"><i class="fas fa-store"></i> Comércios</a></li>
+          <li><a href="sobre.html"><i class="fas fa-info-circle"></i> Sobre</a></li>
+          <li><a href="login.html" class="active"><i class="fas fa-user"></i> Login</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <form id="loginForm" aria-labelledby="login-title">
-      <h2 id="login-title">Login</h2>
-      <div class="input-group">
-        <label for="email">E-mail</label>
-        <input type="email" id="email" required aria-required="true" placeholder="Digite seu e-mail" aria-describedby="email-help"/>
-        <small id="email-help" class="sr-only">Formato: usuario@exemplo.com</small>
+  <main class="main login-page">
+    <div class="container">
+      <div class="login-form">
+        <h2><i class="fas fa-sign-in-alt"></i> Acesse sua conta</h2>
+        <form id="loginForm">
+          <div class="form-group">
+            <label for="email"><i class="fas fa-envelope"></i> E-mail</label>
+            <input type="email" id="email" required placeholder="Digite seu e-mail">
+          </div>
+          
+          <div class="form-group">
+            <label for="senha"><i class="fas fa-lock"></i> Senha</label>
+            <input type="password" id="senha" required placeholder="Digite sua senha">
+            <a href="#" class="forgot-password">Esqueceu a senha?</a>
+          </div>
+          
+          <button type="submit" class="btn btn-primary">
+            <i class="fas fa-sign-in-alt"></i> Entrar
+          </button>
+          
+          <div class="form-link">
+            Não tem conta? <a href="cadastro.html">Cadastre-se aqui</a>
+          </div>
+        </form>
       </div>
-      <div class="input-group">
-        <label for="senha">Senha</label>
-        <input type="password" id="senha" required aria-required="true" placeholder="Digite sua senha"/>
-      </div>
-      <button type="submit" class="btn">Entrar</button>
-      <p class="form-link">Não tem conta? <a href="cadastro.html">Cadastre-se aqui</a></p>
-    </form>
+    </div>
   </main>
 
-  <footer>
-    <div class="footer-content">
-      <p>&copy; 2025 Varjão Digital. Todos os direitos reservados.</p>
-      <nav aria-label="Links secundários">
-        <a href="privacidade.html">Política de Privacidade</a>
-        <a href="contato.html">Contato</a>
-      </nav>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-info">
+          <h3>Varjão Digital</h3>
+          <p>O guia completo do comércio local no Varjão, Brasília</p>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Links Rápidos</h4>
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="comercios.html">Comércios</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-contact">
+          <h4>Contato</h4>
+          <p><i class="fas fa-envelope"></i> varjaodigital@gmail.com</p>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 Varjão Digital. Todos os direitos reservados.</p>
+      </div>
     </div>
   </footer>
 
-  <script src="js/menu.js" defer></script>
+  <script src="js/menu.js"></script>
+  <script src="js/login.js"></script>
 </body>
 </html>
