@@ -9,7 +9,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #f4f4f4; /* Cor de fundo clara para o site */
+    background-color: #f4f4f4;
 }
 
 /* Container padrão para todos os elementos */
@@ -55,7 +55,7 @@ body {
 }
 
 .nav-list a:hover {
-    color: #007bff; /* Cor de destaque ao passar o mouse */
+    color: #007bff;
 }
 
 /* Botões */
@@ -103,11 +103,10 @@ body {
 /* Responsividade */
 @media (max-width: 768px) {
     .nav-list {
-        display: none; /* Esconde a lista de navegação em telas pequenas */
+        display: none;
     }
 
     .nav-toggle {
-        display: block; /* Exibe o botão de menu em telas pequenas */
+        display: block;
     }
 }
-
