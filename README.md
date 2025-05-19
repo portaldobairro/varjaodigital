@@ -2,6 +2,7 @@
 
 - 🤔 O site está em desenvolvimento
 - 💬 https://varjaodigital.vercel.app/
+- 💬 No GitHub: https://varjaodigital.github.io/varjaodigital/
 - 📫 Sugestões? Contate-nos pelo site
 
 <!--
