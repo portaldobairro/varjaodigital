@@ -8,9 +8,9 @@ const comercios = [
     telefone: "(61) 0000-0000",
     descricao: "Padaria tradicional com os melhores pães e doces da região.",
     fotos: [
-      "img/comercios/panificadora-bonanza-1.jpg",
-      "img/comercios/panificadora-bonanza-2.jpg",
-      "img/comercios/panificadora-bonanza-3.jpg"
+      "img/comercios/panificadora-bonanza-1.wepb",
+      "img/comercios/panificadora-bonanza-2.wepb",
+      "img/comercios/panificadora-bonanza-3.wepb"
     ],
     destaque: true
   },
@@ -22,7 +22,7 @@ const comercios = [
     telefone: "(61) 0000-0000",
     descricao: "Mercado completo com variedade de produtos.",
     fotos: [
-      "img/comercios/nazar-roupas-1.jpg"
+      "img/comercios/nazar-roupas-1.wepb"
     ],
     destaque: true
   },
@@ -34,7 +34,7 @@ const comercios = [
     telefone: "(61) 0000-0000",
     descricao: "Moda para toda a família com os melhores preços.",
     fotos: [
-      "img/comercios/granfinos-burguer-1.jpg"
+      "img/comercios/granfinos-burguer-1.wepb"
     ],
     destaque: false
   },
@@ -46,7 +46,7 @@ const comercios = [
     telefone: "(61) 0000-0000",
     descricao: "Farmácia completa com medicamentos e produtos de saúde.",
     fotos: [
-      "img/comercios/farmacia-atacadao-1.jpg"
+      "img/comercios/farmacia-atacadao-1.wepb"
     ],
     destaque: true
   },
@@ -58,7 +58,7 @@ const comercios = [
     telefone: "(61) 0000-0000",
     descricao: "Cabelo, manicure, pedicure e tratamentos estéticos.",
     fotos: [
-      "img/comercios/casa-lins-1.jpg"
+      "img/comercios/casa-lins-1.wepb"
     ],
     destaque: false
   },
@@ -70,7 +70,7 @@ const comercios = [
     telefone: "(61) 0000-0000",  
     descricao: "Loja de games e eletrônicos.",
     fotos: [
-      "img/comercios/conexao-games-1.jpg"
+      "img/comercios/conexao-games-1.wepb"
     ],
     destaque: true
   }
