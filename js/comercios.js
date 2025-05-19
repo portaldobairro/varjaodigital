@@ -4,6 +4,8 @@ const comercios = [
     id: 1,
     nome: "Panificadora Bonanza",
     categoria: "alimentacao",
+    endereco: "Varjão", 
+    telefone: "(61) 0000-0000",
     descricao: "Padaria tradicional com os melhores pães e doces da região.",
     fotos: [
       "img/comercios/panificadora-bonanza-1.jpg",
@@ -16,6 +18,8 @@ const comercios = [
     id: 2,
     nome: "Nazar Roupas",
     categoria: "vestuario",
+    endereco: "Varjão", 
+    telefone: "(61) 0000-0000",
     descricao: "Mercado completo com variedade de produtos.",
     fotos: [
       "img/comercios/nazar-roupas-1.jpg"
@@ -26,6 +30,8 @@ const comercios = [
     id: 3,
     nome: "Granfinos Burguer",
     categoria: "alimentacao",
+    endereco: "Varjão", 
+    telefone: "(61) 0000-0000",
     descricao: "Moda para toda a família com os melhores preços.",
     fotos: [
       "img/comercios/granfinos-burguer-1.jpg"
@@ -36,6 +42,8 @@ const comercios = [
     id: 4,
     nome: "Farmácia Atacadão",
     categoria: "saude",
+    endereco: "Varjão", 
+    telefone: "(61) 0000-0000",
     descricao: "Farmácia completa com medicamentos e produtos de saúde.",
     fotos: [
       "img/comercios/farmacia-atacadao-1.jpg"
@@ -46,6 +54,8 @@ const comercios = [
     id: 5,
     nome: "Casa Lins",
     categoria: "servicos",
+    endereco: "Varjão", 
+    telefone: "(61) 0000-0000",
     descricao: "Cabelo, manicure, pedicure e tratamentos estéticos.",
     fotos: [
       "img/comercios/casa-lins-1.jpg"
@@ -56,7 +66,9 @@ const comercios = [
     id: 6,
     nome: "Conexão Games",
     categoria: "servicos",
-    descricao: "Comida caseira e ambiente agradável.",
+    endereco: "Varjão", 
+    telefone: "(61) 0000-0000",  
+    descricao: "Loja de games e eletrônicos.",
     fotos: [
       "img/comercios/conexao-games-1.jpg"
     ],
