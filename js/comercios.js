@@ -2,80 +2,63 @@
 const comercios = [
   {
     id: 1,
-    nome: "Padaria Pão Nosso",
+    nome: "Panificadora Bonanza",
     categoria: "alimentacao",
-    endereco: "Rua Principal, 123",
-    telefone: "(61) 9999-9999",
     descricao: "Padaria tradicional com os melhores pães e doces da região.",
     fotos: [
-      "img/comercios/padaria-1.jpg",
-      "img/comercios/padaria-2.jpg",
-      "img/comercios/padaria-3.jpg"
+      "img/comercios/panificadora-bonanza-1.jpg",
+      "img/comercios/panificadora-bonanza-2.jpg",
+      "img/comercios/panificadora-bonanza-3.jpg"
     ],
     destaque: true
   },
   {
     id: 2,
-    nome: "Mercado Varjão",
-    categoria: "alimentacao",
-    endereco: "Av. Central, 456",
-    telefone: "(61) 9888-8888",
+    nome: "Nazar Roupas",
+    categoria: "vestuario",
     descricao: "Mercado completo com variedade de produtos.",
     fotos: [
-      "img/comercios/mercado-1.jpg",
-      "img/comercios/mercado-2.jpg"
+      "img/comercios/nazar-roupas-1.jpg"
     ],
     destaque: true
   },
   {
     id: 3,
-    nome: "Loja de Roupas Estilo",
-    categoria: "vestuario",
-    endereco: "Rua Comercial, 789",
-    telefone: "(61) 9777-7777",
+    nome: "Granfinos Burguer",
+    categoria: "alimentacao",
     descricao: "Moda para toda a família com os melhores preços.",
     fotos: [
-      "img/comercios/loja-1.jpg",
-      "img/comercios/loja-2.jpg",
-      "img/comercios/loja-3.jpg"
+      "img/comercios/granfinos-burguer-1.jpg"
     ],
     destaque: false
   },
   {
     id: 4,
-    nome: "Farmácia Saúde",
+    nome: "Farmácia Atacadão",
     categoria: "saude",
-    endereco: "Rua das Flores, 101",
-    telefone: "(61) 9666-6666",
     descricao: "Farmácia completa com medicamentos e produtos de saúde.",
     fotos: [
-      "img/comercios/farmacia-1.jpg"
+      "img/comercios/farmacia-atacadao-1.jpg"
     ],
     destaque: true
   },
   {
     id: 5,
-    nome: "Salão de Beleza",
+    nome: "Casa Lins",
     categoria: "servicos",
-    endereco: "Av. Principal, 202",
-    telefone: "(61) 9555-5555",
     descricao: "Cabelo, manicure, pedicure e tratamentos estéticos.",
     fotos: [
-      "img/comercios/salao-1.jpg",
-      "img/comercios/salao-2.jpg"
+      "img/comercios/casa-lins-1.jpg"
     ],
     destaque: false
   },
   {
     id: 6,
-    nome: "Bar e Restaurante",
-    categoria: "alimentacao",
-    endereco: "Rua da Praça, 303",
-    telefone: "(61) 9444-4444",
+    nome: "Conexão Games",
+    categoria: "servicos",
     descricao: "Comida caseira e ambiente agradável.",
     fotos: [
-      "img/comercios/restaurante-1.jpg",
-      "img/comercios/restaurante-2.jpg"
+      "img/comercios/conexao-games-1.jpg"
     ],
     destaque: true
   }
